@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Продукти – TechNova Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #F8F0E3;
+            color: #336699;
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 0 20px 60px;
+            line-height: 1.6;
+        }
+
+        h3 {
+            font-weight: 700;
+            font-size: 2.8rem;
+            color: #1a237e;
+            text-align: center;
+            position: relative;
+            margin-bottom: 40px;
+            user-select: none;
+        }
+
+        /* Добавляем стиль "приключения" — линия с двумя цветными акцентами */
+        h3::before, h3::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #d7263d, #2196f3);
+            border-radius: 2px;
+            transform: translateY(-50%);
+        }
+
+        h3::before {
+            left: 0;
+        }
+
+        h3::after {
+            right: 0;
+        }
+
+        /* Подчёркивание с лёгким градиентом и небольшой тенью */
+        h3 {
+            padding-bottom: 8px;
+            border-bottom: 3px solid transparent;
+            background-image: linear-gradient(90deg, #d7263d, #2196f3);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: 60%;
+        }
+
+        .product {
+            background: #fff;
+            margin: 30px 0;
+            padding: 25px 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+            transition: box-shadow 0.3s ease;
+        }
+        .product:hover {
+            box-shadow: 0 12px 36px rgba(0,0,0,0.15);
+        }
+
+        .product h4 {
+            font-size: 1.7rem;
+            margin-bottom: 12px;
+            color: #d7263d;
+        }
+
+        .product img {
+            display: block;
+            margin: 0 auto 15px;
+            max-width: 350px;
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .product img:hover {
+            transform: scale(1.05);
+        }
+
+        .product ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .product ul li {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .product ul li a {
+            color: #336699;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .product ul li a:hover {
+            color: #1a237e;
+            text-decoration: underline;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #1a237e;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 600px) {
+            h3 {
+                font-size: 2.2rem;
+                background-size: 40%;
+            }
+            h3::before, h3::after {
+                width: 50px;
+            }
+            .product h4 {
+                font-size: 1.4rem;
+            }
+            .product img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>Наш асортимент</h3>
+
+    <div class="product">
+        <h4>📦 BusinessManager Pro (товар1)</h4>
+        <img src="товар1.png" alt="BusinessManager Pro">
+        <ul>
+            <li>
+                <a href="#">Комплексна ERP-система для малого та середнього бізнесу.<br>
+                Ціна: <span class="price">15 000 грн</span>.</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="product">
+        <h4>📱 MobileCRM (товар2)</h4>
+        <img src="товар2.png" alt="MobileCRM">
+        <ul>
+            <li>
+                <a href="#">Мобільна CRM-платформа для віддаленого управління продажами.<br>
+                Ціна: <span class="price">8 500 грн</span>.</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="product">
+        <h4>🛒 E-Commerce Engine (товар3)</h4>
+        <img src="товар3.png" alt="E-Commerce Engine">
+        <ul>
+            <li>
+                <a href="#">Гнучке рішення для створення онлайн-магазинів з інтеграцією з платіжними системами.<br>
+                Ціна: <span class="price">12 000 грн</span>.</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

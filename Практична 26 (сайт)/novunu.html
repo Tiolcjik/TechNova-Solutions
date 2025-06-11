@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Новини – TechNova Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background: #F8F0E3;
+            color: #333366;
+            font-family: 'Courier New', monospace;
+            margin: 40px auto;
+            max-width: 800px;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: 'Pacifico', cursive;
+            color: #D7263D;
+            animation: slideDown 1.5s ease;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px #fff;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title-divider {
+            border: none;
+            border-top: 3px dashed #ff4081;
+            width: 80px;
+            margin: 10px auto 30px;
+        }
+
+        .news-card {
+            background: #fffaf7;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: scale(1.02);
+        }
+
+        .news-date {
+            color: #D7263D;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .news-text {
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .news-text a {
+            color: #2196F3;
+            text-decoration: none;
+        }
+
+        .news-text a:hover {
+            text-decoration: underline;
+            color: #1a237e;
+        }
+
+        .footer-message {
+            margin-top: 40px;
+            text-align: center;
+            color: #880e4f;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 15px 25px;
+            border: 2px solid #ff80ab;
+            border-radius: 12px;
+            background-color: #fff0f5;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .gif-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .gif-container img {
+            width: 120px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <h3>Останні новини</h3>
+    <hr class="title-divider" />
+
+    <div class="news-card">
+        <span class="news-date">🔔 20 травня 2025</span>
+        <p class="news-text">
+            TechNova запускає нову платформу для управління бізнесом! З 
+            <a href="#">Ген Директором Компанії</a>. Початок о 15:00.
+        </p>
+    </div>
+
+    <div class="news-card">
+        <span class="news-date">💼 15 квітня 2025</span>
+        <p class="news-text">
+            TechNova вийшла на міжнародний ринок. В цьому допоміг:
+            <a href="#">Микола Хом'як</a>. Він розробив потужну стратегію.
+        </p>
+    </div>
+
+    <div class="news-card">
+        <span class="news-date">🎉 1 березня 2025</span>
+        <p class="news-text">
+            Нам 5 років!
+        </p>
+    </div>
+
+    <div class="footer-message">
+        Ласкаво просимо! Будьте в курсі наших подій! 😊
+    </div>
+
+    <div class="gif-container">
+        <img src="https://media.giphy.com/media/3o6ZsWT5bMg6tD7b28/giphy.gif" alt="funny news gif" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Контакти – TechNova Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8f0e3, #e6ecf2);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            color: #336699;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #ffffffdd;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Заголовок без обводки, с синим градиентом и иконкой */
+        h3 {
+            position: relative;
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(270deg, #0077ff, #3399ff, #0077ff);
+            background-size: 600% 600%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 6s ease infinite;
+            user-select: none;
+            cursor: default;
+            padding-right: 40px; /* место для иконки */
+        }
+        /* Анимированная звездочка справа от заголовка */
+        h3::after {
+            content: "✨";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 32px;
+            animation: starTwinkle 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes starTwinkle {
+            0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); }
+            50% { opacity: 0.5; transform: translateY(-50%) scale(1.2); }
+        }
+
+        /* "Чекаємо всіх!" без обводки, с синим цветом и анимированной иконкой */
+        .welcome {
+            position: relative;
+            text-align: center;
+            font-size: 22px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #0055cc;
+            animation: flickerGlow 3s linear infinite;
+            user-select: none;
+            cursor: default;
+            padding-right: 36px; /* место под иконку */
+        }
+        .welcome::after {
+            content: "💙";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 28px;
+            animation: heartBeat 2.5s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes flickerGlow {
+            0%, 100% {opacity: 1;}
+            50% {opacity: 0.7;}
+        }
+        @keyframes heartBeat {
+            0%, 100% { transform: translateY(-50%) scale(1); opacity: 1; }
+            50% { transform: translateY(-50%) scale(1.3); opacity: 0.7; }
+        }
+
+        hr {
+            border: none;
+            border-bottom: 2px solid #0055cc;
+            margin-bottom: 30px;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.7;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            font-size: 18px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 40px;
+            margin-bottom: 30px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            background: #f0f4ff;
+            padding: 12px 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 85, 204, 0.15);
+            transition: background-color 0.3s ease;
+            cursor: default;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        li:hover {
+            background-color: #d6e4ff;
+        }
+
+        li i {
+            color: #0055cc;
+            margin-right: 15px;
+            font-size: 24px;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        li b {
+            margin-right: 6px;
+            color: #004099;
+        }
+
+        /* Спойлер */
+        .spoiler {
+            background: #f9f9f9;
+            border: 2px solid #0055cc;
+            border-radius: 12px;
+            padding: 15px 20px;
+            max-width: 100%;
+            margin: 0 auto 30px;
+            cursor: pointer;
+            user-select: none;
+            font-size: 17px;
+            color: #444;
+            box-shadow: 0 0 10px rgba(0, 85, 204, 0.15);
+            position: relative;
+            transition: background-color 0.3s ease;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .spoiler:hover {
+            background-color: #e6f0ff;
+        }
+
+        .spoiler::after {
+            content: '▼';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #0055cc;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .spoiler.active::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .spoiler-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding-top: 0;
+            margin-top: 0;
+            color: #336699;
+            font-style: italic;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .spoiler.active + .spoiler-content {
+            max-height: 200px;
+            padding-top: 15px;
+            margin-top: 10px;
+        }
+
+        .map {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Контактна інформація</h3>
+        <div class="welcome">Чекаємо всіх! :)</div>
+        <hr />
+
+        <ul>
+            <li><i class="fas fa-phone-alt"></i><b>Телефон:</b>+38 (044) 123-45-67</li>
+            <li><i class="fas fa-envelope"></i><b>Email:</b>info@technova.ua</li>
+            <li><i class="fas fa-map-marker-alt"></i><b>Адреса:</b>вул. Інноваційна, 10, м. Київ, Україна</li>
+        </ul>
+
+        <div class="spoiler" id="spoilerToggle">Також ви можете прийти до нас і особисто поспілкуватися. Ми завжди раді новим знайомствам і відкриті до співпраці.</div>
+        <div class="spoiler-content" id="spoilerContent"></div>
+
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.580334380056!2d30.523400815731725!3d50.45010097947365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472b33d0830e5cf1%3A0x4c4f49e1833b3fc5!2z0JrQsNC80LDRgtC40L3QsCwgMTAsINCn0LXRgNC90ZbQu9GM0YHQutCw0Y8sINCa0LjRl9CyLCAwMTAzMA!5e0!3m2!1suk!2sua!4v1717448749993"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const spoiler = document.getElementById('spoilerToggle');
+        const content = document.getElementById('spoilerContent');
+
+        spoiler.addEventListener('click', () => {
+            spoiler.classList.toggle('active');
+            if (spoiler.classList.contains('active')) {
+                content.textContent = "Також ви можете прийти до нас і особисто поспілкуватися. Ми завжди раді новим знайомствам і відкриті до співпраці.";
+            } else {
+                content.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>

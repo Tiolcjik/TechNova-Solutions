@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Наші послуги – TechNova Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0 20px 80px;
+      font-family: 'Montserrat', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin: 0;
+      color: #1e40af;
+      animation: fadeInUp 1.3s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #555;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 800px;
+      margin: 40px auto;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 25px 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: flex-start;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card .material-icons {
+      font-size: 32px;
+      color: #d7263d;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .service-card b {
+      color: #d7263d;
+    }
+
+    .bottom-accent {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(90deg, #d7263d, #1e40af);
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    @media (min-width: 700px) {
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Додаткові послуги</h1>
+    <p><strong>TechNova Solutions</strong> пропонує широкий спектр професійних ІТ-послуг</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="material-icons">language</span>
+      <div>
+        <b>Розробка веб-сайтів:</b> створення адаптивних сайтів під ключ.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <span class="material-icons">smartphone</span>
+      <div>
+        <b>Мобільні додатки:</b> Android та iOS рішення для бізнесу.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <span class="material-icons">sync_alt</span>
+      <div>
+        <b>Автоматизація процесів:</b> CRM, ERP-системи, інтеграції.
+      </div>
+    </div>
+
+    <div class="service-card">
+      <span class="material-icons">cloud</span>
+      <div>
+        <b>Хмарні сервіси:</b> розгортання та підтримка в AWS, Azure.
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-accent"></div>
+</body>
+</html>
+
